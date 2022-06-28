@@ -5,5 +5,4 @@ resource "aws_autoscaling_schedule" "app_dfp_scale_up" {
   desired_capacity       = "${var.desired_capacity}"
   recurrence             = "${var.scale_up_cron}"
   autoscaling_group_name = "${data.aws_autoscaling_group.app_dfp_asg.name}"
-  time_zone              = "${var.time_zone}"
 }
